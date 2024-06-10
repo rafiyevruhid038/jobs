@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Job List</h1>
+        </div>
+        <nav class="header-center">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <input type="text" id="search" placeholder="Searching...">
+            <button onclick="searchJobs()">Search</button>
+            <button id="loginBtn" data-toggle="modal" data-target="#loginModal">Log In</button>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <aside id="categories">
+                <button onclick="toggleCategories()">Categories</button>
+                <ul id="categoryList"></ul>
+            </aside>
+            <main id="jobList">
+                <!-- İş elanları buraya yüklənəcək -->
+            </main>
+        </div>
+
+        <!-- Login Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Log In</button>
+                            <button type="button" class="btn btn-link" onclick="showSignup()">Sign Up</button>
+                        </form>
+                        <form id="signupForm">
+                            <div class="form-group">
+                                <label for="Name">Name:</label>
+                                <input type="text" class="form-control" id="Name" name="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="surname">Surname:</label>
+                                <input type="text" class="form-control" id="surname" name="surname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newEmail">New Email:</label>
+                                <input type="email" class="form-control" id="newEmail" name="newEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newUsername">New Username:</label>
+                                <input type="text" class="form-control" id="newUsername" name="newUsername" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">New Password:</label>
+                                <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about">
+            <h2>About Us</h2>
+            <p>Job Listings Site is designed to connect job seekers and employers. We offer job seekers a variety of job listings across different sectors, helping them find jobs quickly and easily. At the same time, we provide employers with a comprehensive job listing database to find candidates that meet their needs.</p>
+            <p>Our goal is to meet the needs of the job market and ensure the satisfaction of both job seekers and employers. Through our site, you can browse job listings in various categories, apply for jobs, and find the most suitable job opportunities to advance your career.</p>
+            <p>We prioritize the satisfaction of our users and continuously innovate to provide the best service. Job Listings Site is here to offer you the best job opportunities!</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Job Listings Site. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

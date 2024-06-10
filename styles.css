@@ -1,0 +1,285 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    flex: 1;
+}
+
+.header-left h1 {
+    margin: 0;
+}
+
+.header-center {
+    flex: 2;
+    text-align: center;
+}
+
+.header-center ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-center a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-right {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header-right input[type="text"] {
+    padding: 5px;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 5px;
+}
+
+.header-right button {
+    padding: 5px 10px;
+    width: 100%;
+    max-width: 200px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.header-right button:hover {
+    background-color: #005bb5;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 200px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ccc;
+}
+
+main {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.modal .modal-content {
+    border-radius: 10px;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#loginForm, #signupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#signupForm {
+    display: none;
+}
+
+#categoryList {
+    display: none;
+}
+
+.modal-header {
+    background-color: #4CAF50;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.about {
+    flex: 1;
+    padding: 20px;
+    background-color: #4CAF50;
+    overflow: hidden;
+}
+
+.about h2 {
+    margin-top: 0;
+    color: black;
+}
+
+.about p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    word-wrap: break-word;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* For screens between 320px and 991px */
+@media screen and (max-width: 991px) and (min-width: 320px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-left, .header-center, .header-right {
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-left, .header-right {
+        padding: 10px;
+    }
+
+    .header-left h1 {
+        font-size: 1.5em;
+    }
+
+    .header-center ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-right input[type="text"] {
+        width: 100%;
+    }
+
+    .header-right button {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        border-right: none;
+    }
+
+    .about {
+        padding: 10px;
+    }
+
+    .about h2 {
+        font-size: 1.5em;
+    }
+
+    .about p {
+        font-size: 1em;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+}
+
+/* For screens between 992px and 1279px */
+@media screen and (max-width: 1279px) and (min-width: 992px) {
+    header {
+        padding: 15px;
+    }
+
+    .header-left h1 {
+        font-size: 2em;
+    }
+
+    .header-center ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .header-right {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header-right input[type="text"] {
+        width: 200px;
+        margin-right: 10px;
+    }
+
+    .header-right button {
+        padding: 8px 15px;
+        margin-left: 10px;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    aside {
+        width: 250px;
+        border-bottom: none;
+        border-right: 1px solid #ccc;
+    }
+
+    .about h2 {
+        font-size: 1.8em;
+    }
+
+    .about p {
+        font-size: 1.1em;
+    }
+
+    footer p {
+        font-size: 1em;
+    }
+}
